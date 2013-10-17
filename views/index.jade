@@ -3,8 +3,7 @@ extends layout
 block content
 	h1= title
 	p Welcome to #{title}
-	div#message
-	form.tiny-rhinos(method="post", action="")
+	form#signup-form.tiny-rhinos(method="post", action="/")
 		div.specificname 
 			label Specific Name:
 			br
@@ -15,7 +14,7 @@ block content
 			mixin radio(name)
 
 				-for(i=0; i<name.length; i++){
-					input(type="radio", name="size", value="#{name[i]}")
+					input(type="radio", name="semsize", value="#{name[i]}")
 					label.name= name[i][0].toUpperCase()+name[i].slice(1) 
 					br
 				-}
@@ -30,8 +29,9 @@ block content
 		div.temp
 			p Temperature
 		hr
-		button#signup-form.btn.btn-default(type="submit", value="Submit") Submit
+		button.btn.btn-default(type="submit", value="Submit") Submit
 		div#loader
+		div#message
 
 
 	script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")

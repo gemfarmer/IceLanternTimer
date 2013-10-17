@@ -20,7 +20,6 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
-
 app.use(require("stylus").middleware({  //allows stylus
         src: __dirname + "/public",
         compress: true
@@ -54,7 +53,7 @@ app.post('/signup', function(req, res){
                 console.log("specific name:", req.body.specificname);
                 
 
-                res.send({success : 'Success!', specificname: req.body.specificname})
+                res.send({success : 'Success!', specificname: req.body.specificname, size: req.body.semsize})
         }
         else{ // If there isnt a bit of data called "email", return an error
                 res.send({error : "Please provide provide balloon identification information."})

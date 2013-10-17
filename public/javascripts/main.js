@@ -1,13 +1,14 @@
 var $range = $('.range');
 var $rangeRover = $(".range-rover");
+var $signupForm = $('#signup-form')
 
 $(function(){
 
-	$('form').on('click', function(){
-		console.log(this)
-		// $(this).addClass('highlight');
-		$('body').addClass('highlight');
-	});
+	// $('form').on('click', function(){
+	// 	console.log(this)
+	// 	// $(this).addClass('highlight');
+	// 	$('body').addClass('highlight');
+	// });
 
 	function showValue(newValue){
 		$range.text(newValue);
@@ -21,7 +22,8 @@ $(function(){
 
 	})
 
-	$("#signup-form").submit(function(e){
+	$signupForm.submit(function(e){
+		
         e.preventDefault();
         console.log(this);
         $('#message').empty();

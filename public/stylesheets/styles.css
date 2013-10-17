@@ -1,36 +1,177 @@
-hr{width:100%}
-.semantic-size label{margin-left:3px}
-.message{float:right}
-.highlight{background-color:#add8e6}
-@-webkit-keyframes mymove{0%{left:0;background-color:#00008b}
-25%{left:844px;background-color:#4682b4}
-50%{left:211px;}
-75%{left:633px;background-color:#87ceeb}
-100%{left:422px;background-color:#add8e6}
-}.move{width:50px;height:50px;border-radius:25px;position:relative;animation:mymove 4.01s infinite;-webkit-animation:mymove 4.01s infinite}
-@-moz-keyframes mymove{0%{left:0;background-color:#00008b}
-25%{left:844px;background-color:#4682b4}
-50%{left:211px;}
-75%{left:633px;background-color:#87ceeb}
-100%{left:422px;background-color:#add8e6}
-}@-webkit-keyframes mymove{0%{left:0;background-color:#00008b}
-25%{left:844px;background-color:#4682b4}
-50%{left:211px;}
-75%{left:633px;background-color:#87ceeb}
-100%{left:422px;background-color:#add8e6}
-}@-o-keyframes mymove{0%{left:0;background-color:#00008b}
-25%{left:844px;background-color:#4682b4}
-50%{left:211px;}
-75%{left:633px;background-color:#87ceeb}
-100%{left:422px;background-color:#add8e6}
-}@-ms-keyframes mymove{0%{left:0;background-color:#00008b}
-25%{left:844px;background-color:#4682b4}
-50%{left:211px;}
-75%{left:633px;background-color:#87ceeb}
-100%{left:422px;background-color:#add8e6}
-}@keyframes mymove{0%{left:0;background-color:#00008b}
-25%{left:844px;background-color:#4682b4}
-50%{left:211px;}
-75%{left:633px;background-color:#87ceeb}
-100%{left:422px;background-color:#add8e6}
+hr {
+  width: 50%;
+}
+.semantic-size label {
+  margin-left: 3px;
+}
+#message {
+  float: right;
+  text-align: center;
+}
+.highlight {
+  background-color: #add8e6;
+}
+@-webkit-keyframes mymove {
+  0% {
+    left: 0px;
+    background-color: #00008b;
+  }
+
+  25% {
+    left: 844px;
+    background-color: #4682b4;
+  }
+
+  50% {
+    left: 211px;
+/*        background-color: blue;*/
+  }
+
+  75% {
+    left: 633px;
+    background-color: #87ceeb;
+  }
+
+  100% {
+    left: 422px;
+    background-color: #add8e6;
+  }
+}
+.move {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  position: relative;
+  animation: mymove 4.01s infinite;
+  -webkit-animation: mymove 4.01s infinite;
+}
+@-moz-keyframes mymove {
+  0% {
+    left: 0px;
+    background-color: #00008b;
+  }
+
+  25% {
+    left: 844px;
+    background-color: #4682b4;
+  }
+
+  50% {
+    left: 211px;
+/*background-color: blue;*/
+  }
+
+  75% {
+    left: 633px;
+    background-color: #87ceeb;
+  }
+
+  100% {
+    left: 422px;
+    background-color: #add8e6;
+  }
+}
+@-webkit-keyframes mymove {
+  0% {
+    left: 0px;
+    background-color: #00008b;
+  }
+
+  25% {
+    left: 844px;
+    background-color: #4682b4;
+  }
+
+  50% {
+    left: 211px;
+/*background-color: blue;*/
+  }
+
+  75% {
+    left: 633px;
+    background-color: #87ceeb;
+  }
+
+  100% {
+    left: 422px;
+    background-color: #add8e6;
+  }
+}
+@-o-keyframes mymove {
+  0% {
+    left: 0px;
+    background-color: #00008b;
+  }
+
+  25% {
+    left: 844px;
+    background-color: #4682b4;
+  }
+
+  50% {
+    left: 211px;
+/*background-color: blue;*/
+  }
+
+  75% {
+    left: 633px;
+    background-color: #87ceeb;
+  }
+
+  100% {
+    left: 422px;
+    background-color: #add8e6;
+  }
+}
+@-ms-keyframes mymove {
+  0% {
+    left: 0px;
+    background-color: #00008b;
+  }
+
+  25% {
+    left: 844px;
+    background-color: #4682b4;
+  }
+
+  50% {
+    left: 211px;
+/*background-color: blue;*/
+  }
+
+  75% {
+    left: 633px;
+    background-color: #87ceeb;
+  }
+
+  100% {
+    left: 422px;
+    background-color: #add8e6;
+  }
+}
+@keyframes mymove {
+  0% {
+    left: 0px;
+    background-color: #00008b;
+  }
+
+  25% {
+    left: 844px;
+    background-color: #4682b4;
+  }
+
+  50% {
+    left: 211px;
+/*background-color: blue;*/
+  }
+
+  75% {
+    left: 633px;
+    background-color: #87ceeb;
+  }
+
+  100% {
+    left: 422px;
+    background-color: #add8e6;
+  }
 }

@@ -3,11 +3,12 @@ extends layout
 block content
 	h1= title
 	p Welcome to #{title}
+	div#message
 	form.tiny-rhinos
 		div.specific-name 
 			label Specific Name:
 			br
-			input(type="text", name="specific-name", placeholder="iceball")
+			input(type="text", name="specificname", placeholder="iceball")
 		hr
 		div.semantic-size 
 			p Size:
@@ -28,7 +29,12 @@ block content
 		hr
 		div.temp
 			p Temperature
+		hr
+		button#signup-form.btn.btn-default Submit
+		div#loader
+
 
 	script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+	script(src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js")
 	script(src="/javascripts/main.js")
 

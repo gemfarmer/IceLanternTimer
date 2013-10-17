@@ -20,7 +20,13 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
+
+app.use(require("stylus").middleware({  //allows stylus
+        src: __dirname + "/public",
+        compress: true
+}));
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.get('/', function(req, res){
 	res.render('index', { 
@@ -37,6 +43,24 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+
+app.post('/signup', function(req, res){
+
+        setTimeout(function(){
+                
+        // if there is a bit of data called "email" in the response body
+        // then return a JSON object with a property called "success"
+        if(req.body.specific-name){
+                console.log("specific name:", req.body.specificname);
+                
+
+                res.send({success : 'Success!', specificName: req.body.specificname})
+        }
+        else{ // If there isnt a bit of data called "email", return an error
+                res.send({error : "Please provide provide balloon identification information."})
+        }
+        },4000);
+})
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

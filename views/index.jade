@@ -1,0 +1,34 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	form.tiny-rhinos
+		div.specific-name 
+			label Specific Name:
+			br
+			input(type="text", name="specific-name", placeholder="iceball")
+		hr
+		div.semantic-size 
+			p Size:
+			mixin radio(name)
+
+				-for(i=0; i<name.length; i++){
+					input(type="radio", name="size", value="#{name[i]}")
+					label.name= name[i][0].toUpperCase()+name[i].slice(1) 
+					br
+				-}
+			+radio(size)
+		hr
+		div.weight
+			p Weight (lbs.):
+			input.range-rover(type="range", min="0", max="80", value="25", step="1")
+			br
+			span.range 25
+		hr
+		div.temp
+			p Temperature
+
+	script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+	script(src="/javascripts/main.js")
+

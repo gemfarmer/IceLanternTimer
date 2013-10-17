@@ -1,6 +1,7 @@
 hr{width:100%}
 .semantic-size label{margin-left:3px}
 .message{float:right}
+.highlight{background-color:#add8e6}
 @-webkit-keyframes mymove{0%{left:0;background-color:#00008b}
 25%{left:844px;background-color:#4682b4}
 50%{left:211px;}

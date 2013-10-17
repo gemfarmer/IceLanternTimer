@@ -4,8 +4,8 @@ block content
 	h1= title
 	p Welcome to #{title}
 	div#message
-	form.tiny-rhinos
-		div.specific-name 
+	form.tiny-rhinos(method="post", action="")
+		div.specificname 
 			label Specific Name:
 			br
 			input(type="text", name="specificname", placeholder="iceball")
@@ -30,7 +30,7 @@ block content
 		div.temp
 			p Temperature
 		hr
-		button#signup-form.btn.btn-default Submit
+		button#signup-form.btn.btn-default(type="submit", value="Submit") Submit
 		div#loader
 
 

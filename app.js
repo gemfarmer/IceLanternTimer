@@ -50,11 +50,11 @@ app.post('/signup', function(req, res){
                 
         // if there is a bit of data called "email" in the response body
         // then return a JSON object with a property called "success"
-        if(req.body.specific-name){
+        if(req.body.specificname){
                 console.log("specific name:", req.body.specificname);
                 
 
-                res.send({success : 'Success!', specificName: req.body.specificname})
+                res.send({success : 'Success!', specificname: req.body.specificname})
         }
         else{ // If there isnt a bit of data called "email", return an error
                 res.send({error : "Please provide provide balloon identification information."})

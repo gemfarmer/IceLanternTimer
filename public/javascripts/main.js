@@ -1,56 +1,46 @@
-var $range = $('.range');
+var $weight = $('#weight');
+var $temp = $('#temp');
 var $rangeRover = $(".range-rover");
+var $tempRover = $('.temp-rover')
 var $signupForm = $('#signup-form')
+var $message = $('.message')
 
 $(function(){
 
-	// $('form').on('click', function(){
-	// 	console.log(this)
-	// 	// $(this).addClass('highlight');
-	// 	$('body').addClass('highlight');
-	// });
-
-	function showValue(newValue){
-		$range.text(newValue);
-	}
-
 	$rangeRover.on("change", function(e){
 		e.preventDefault()
-		// console.log("thisis",this)
-		// console.log($rangeRover[0].value)
-		showValue($rangeRover[0].value)
 
+		if($(this).hasClass('weight')){
+			$weight.text($(this)[0].value + " lbs.")
+		}
+		else if($(this).hasClass('temp')){
+			$temp.text($(this)[0].value + " F")
+		}
 	})
 
 	$signupForm.submit(function(e){
 		
         e.preventDefault();
         console.log(this);
-        $('#message').empty();
-        $('#loader').addClass('move');
-
+        $message.empty();
+       
+       
 
         //make a post request to our /signup endpoint
         $.post('/signup', $(this).serialize(), function(data){
-                console.log("posted");
-                // stop the loader
-                $('#loader').removeClass('move');
 
-
-                //if there was an error, show the error
                 if(data.error){
                         // add the error text to the error div
                         $('#message').text(data.error);
-
                 }
-
                 // if the request returned a success message, display it.
-                if(data.success){
-                        
-                        $('#message').text(data.success);
-                        
+                if(data.success){        
+                        $('#message').text(data.success);      
                 }
         });
+         $signupForm.each(function(){
+			this.reset();
+		});
         
     });
 

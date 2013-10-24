@@ -7,7 +7,7 @@ block content
 		div.specificname 
 			label Specific Name:
 			br
-			input(type="text", name="specificname", placeholder="iceball")
+			input(type="text", name="specificname", placeholder="enter name...")
 		hr
 		div.semantic-size 
 			p Size:
@@ -22,12 +22,15 @@ block content
 		hr
 		div.weight
 			p Weight (lbs.):
-			input.range-rover(type="range", min="0", max="80", value="25", step="1")
+			input.weight.range-rover(name="weight" type="range", min="0", max="80", value="5", step="1")
 			br
-			span.range 25
+			span#weight 25
 		hr
 		div.temp
 			p Temperature
+			input.temp.range-rover(name="temp" type="range", min="-30", max="40", value="40", step="1")
+			br
+			span#temp 25 
 		hr
 		button.btn.btn-default(type="submit", value="Submit") Submit
 		div#loader
